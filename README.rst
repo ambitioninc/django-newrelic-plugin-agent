@@ -1,9 +1,6 @@
 .. image:: https://travis-ci.org/ambitioninc/django-newrelic-plugin-agent.png
    :target: https://travis-ci.org/ambitioninc/django-newrelic-plugin-agent
 
-.. image:: https://coveralls.io/repos/ambitioninc/django-newrelic-plugin-agent/badge.png?branch=develop
-    :target: https://coveralls.io/r/ambitioninc/django-newrelic-plugin-agent?branch=develop
-
 .. image:: https://pypip.in/v/django-newrelic-plugin-agent/badge.png
     :target: https://pypi.python.org/pypi/django-newrelic-plugin-agent/
     :alt: Latest PyPI version
@@ -14,11 +11,10 @@
 
 
 django-newrelic-plugin-agent
-===============
+============================
 
 
-I have failed to provide a good README.rst in my project, and you should shun
-me if I do any pull requests
+An interface for publishing arbitrary business layer metrics to New Relic
 
 Installation
 ------------
