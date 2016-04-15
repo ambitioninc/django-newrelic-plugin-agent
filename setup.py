@@ -39,8 +39,13 @@ setup(
     license='MIT',
     install_requires=[
         'django>=1.7',
+        'django-manager-utils>=0.9.1',
+        'jsonfield>=0.9.23',
+        'celery==3.1.18',
+        'django-db-mutex>=0.3.0',
     ],
     tests_require=[
+        'freezegun>=0.2.8',
         'psycopg2',
         'django-nose',
         'mock>=1.0.1',
