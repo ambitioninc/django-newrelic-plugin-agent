@@ -20,7 +20,7 @@ def get_version():
 setup(
     name='django-newrelic-plugin-agent',
     version=get_version(),
-    description='',
+    description='Publish arbitrary metrics to New Relic from within Django application',
     long_description=open('README.rst').read(),
     url='https://github.com/ambitioninc/django-newrelic-plugin-agent',
     author='Ryan Bales',
