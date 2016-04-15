@@ -1,13 +1,8 @@
 .. image:: https://travis-ci.org/ambitioninc/django-newrelic-plugin-agent.png
    :target: https://travis-ci.org/ambitioninc/django-newrelic-plugin-agent
 
-.. image:: https://pypip.in/v/django-newrelic-plugin-agent/badge.png
-    :target: https://pypi.python.org/pypi/django-newrelic-plugin-agent/
-    :alt: Latest PyPI version
-
-.. image:: https://pypip.in/d/django-newrelic-plugin-agent/badge.png
-    :target: https://pypi.python.org/pypi/django-newrelic-plugin-agent/
-    :alt: Number of PyPI downloads
+.. image:: https://coveralls.io/repos/github/ambitioninc/django-newrelic-plugin-agent/badge.svg?branch=master
+    :target: https://coveralls.io/github/ambitioninc/django-newrelic-plugin-agent?branch=master
 
 
 Django New Relic Plugin Agent
@@ -15,6 +10,9 @@ Django New Relic Plugin Agent
 
 
 Publish arbitrary metrics to New Relic without having to build plugins with the New Relic SDK (Java, .NET)
+
+https://docs.newrelic.com/docs/plugins/plugin-developer-resources/developer-reference/plugin-api-specification
+
 
 Installation
 ------------
