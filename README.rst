@@ -10,11 +10,11 @@
     :alt: Number of PyPI downloads
 
 
-django-newrelic-plugin-agent
-============================
+Django New Relic Plugin Agent
+=============================
 
 
-An interface for publishing arbitrary business layer metrics to New Relic
+Publish arbitrary metrics to New Relic without having to build plugins with the New Relic SDK (Java, .NET)
 
 Installation
 ------------

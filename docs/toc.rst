@@ -6,6 +6,5 @@ Table of Contents
 
    index
    installation
-   ref/newrelic_plugin_agent
    contributing
    release_notes
