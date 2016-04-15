@@ -34,12 +34,27 @@ Set metric push task to run as often as you like. New Relic recommends 60 second
     ...     task='newrelic_plugin_agent.tasks.PushMetricTimeslicesTask')
 
 
-Adding Metric Values to be Sent to New Relic
---------------------------------------------
+Add a Plugin Component
+----------------------
 
-Pushing a metric value through the interface will fork an async job to add the value to the metric queue
+A component can be thought of as an aspect of your application/stack that you want to monitor.
 
 .. code-block:: python
 
-    >>> from newrelic_plugin_agent.interface import push_value
-    >>> push_value('AccountsCreated', 1) # created a new account, track frequency
+    >>> from newrelic_plugin_agent.models import NewRelicComponent
+    >>> # create a component
+    >>> component = NewRelicComponent.objects.create(
+    ...     name='AccountActivity', guid='com.your_company_name.account_activity')
+
+
+Adding Metric Values to be Sent to New Relic
+--------------------------------------------
+
+Push a metric value by forking an async job to add the value to the metric queue
+
+.. code-block:: python
+
+    >>> from newrelic_plugin_agent.tasks import PushMetricValueTask
+    >>> # created a new account, track frequency
+    >>> PushMetricValueTask.delay(component, 'AccountsCreated', 1)
+
