@@ -3,7 +3,7 @@ from datetime import datetime
 from logging import getLogger
 
 from celery import Task
-from db_mutex import db_mutex, DBMutexError
+from db_mutex.db_mutex import db_mutex, DBMutexError
 from requests import post
 
 from newrelic_plugin_agent.conf import settings
