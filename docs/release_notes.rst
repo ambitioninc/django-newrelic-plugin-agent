@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+v0.2.0
+------
+
+* Add python 3.5 support
+
 v0.1.2
 ------
 
