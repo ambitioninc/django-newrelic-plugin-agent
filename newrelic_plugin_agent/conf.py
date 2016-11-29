@@ -39,6 +39,7 @@ class Settings(object):
         setattr(self, attr, val)
         return val
 
+
 settings = Settings()
 
 
