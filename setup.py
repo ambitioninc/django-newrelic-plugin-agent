@@ -41,7 +41,7 @@ setup(
     ],
     license='MIT',
     install_requires=[
-        'django>=1.8',
+        'django<2.0',
         'django-manager-utils>=0.12.0',
         'jsonfield>=0.9.23',
         'django-db-mutex>=0.4.0',
