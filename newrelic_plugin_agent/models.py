@@ -132,7 +132,8 @@ class NewRelicComponent(models.Model):
 
 class NewRelicMetricTimeslice(models.Model):
     # fk to component configuration
-    new_relic_component = models.ForeignKey(NewRelicComponent, related_name='metric_timeslices')
+    new_relic_component = models.ForeignKey(
+        NewRelicComponent, related_name='metric_timeslices', on_delete=models.CASCADE)
     # Unique name of the NR metric
     # examples
     guid = models.CharField(max_length=256)
