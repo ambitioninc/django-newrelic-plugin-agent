@@ -49,7 +49,6 @@ setup(
         'freezegun>=0.2.8',
         'psycopg2',
         'django-nose',
-        'mock>=1.0.1',
         'coverage>=3.7.1',
         'django-dynamic-fixture',
     ],
