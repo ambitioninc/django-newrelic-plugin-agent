@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+v0.5.0
+------
+* Django 3.2-4.2 support only
+* py 3.7-3.9 only
+
 v0.3.0
 ------
 * Moved task definitions
