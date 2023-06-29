@@ -12,7 +12,7 @@ class SettingsTest(TestCase):
         self.assertEqual(settings.NEWRELIC_BASE_URL, DEFAULTS['NEWRELIC_BASE_URL'])
         self.assertEqual(settings.NEWRELIC_LICENSE_KEY, DEFAULTS['NEWRELIC_LICENSE_KEY'])
         with self.assertRaises(AttributeError):
-            assert(settings.FOO)
+            assert settings.FOO
 
     @override_settings(
         NEWRELIC_PLUGIN_AGENT={'TIMESLICE_LOCK_RETRY_DELAY_MS': 500})

@@ -1,6 +1,5 @@
 from manager_utils import ManagerUtilsManager
 from django.db import models
-from jsonfield import JSONField
 
 
 class NewRelicComponent(models.Model):
@@ -139,7 +138,7 @@ class NewRelicMetricTimeslice(models.Model):
     guid = models.CharField(max_length=256)
     # the metric timeslice values
     # https://docs.newrelic.com/docs/plugins/plugin-developer-resources/developer-reference/metric-data-plugin-api#timeslice
-    values = JSONField()
+    values = models.JSONField()
 
     class Meta:
         unique_together = ('new_relic_component', 'guid')

@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django_dynamic_fixture import G
-from mock import patch
+from unittest.mock import patch
 from manager_utils import ManagerUtilsManager
 
 from newrelic_plugin_agent.models import NewRelicMetricTimeslice, NewRelicComponent
