@@ -9,35 +9,30 @@ def configure_settings():
     Configures settings for manage.py and for run_tests.py.
     """
     if not settings.configured:
-        # Determine the database settings depending on if a test_db var is set in CI mode or not
-        test_db = os.environ.get('DB', 'postgres')
-        if test_db is None:
-            db_config = {
-                'ENGINE': 'django.db.backends.postgresql',
-                'NAME': 'newrelic_plugin_agent',
-                'USER': 'postgres',
-                'PASSWORD': '',
-                'HOST': 'db'
-            }
-        elif test_db == 'postgres':
-            db_config = {
-                'ENGINE': 'django.db.backends.postgresql',
-                'NAME': 'newrelic_plugin_agent',
-                'USER': 'postgres',
-                'PASSWORD': '',
-                'HOST': 'db'
-            }
-        elif test_db == 'sqlite':
-            db_config = {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': 'newrelic_plugin_agent',
-            }
-        else:
-            raise RuntimeError('Unsupported test DB {0}'.format(test_db))
 
-        # Check env for db override (used for github actions)
+        # Check env for settings stored as json (used for github actions)
         if os.environ.get('DB_SETTINGS'):
             db_config = json.loads(os.environ.get('DB_SETTINGS'))
+
+        else:
+            # Determine the database settings depending on if a test_db var is set in CI mode or not
+            test_db = os.environ.get('DB', 'postgres')
+            if test_db == 'postgres':
+                db_config = {
+                    'ENGINE': 'django.db.backends.postgresql',
+                    'NAME': 'newrelic_plugin_agent',
+                    'USER': 'postgres',
+                    'PASSWORD': '',
+                    'HOST': 'db'
+                }
+            elif test_db == 'sqlite':
+                db_config = {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': 'newrelic_plugin_agent',
+                }
+            else:
+                raise RuntimeError('Unsupported test DB {0}'.format(test_db))
+
 
         settings.configure(
             SECRET_KEY='*',

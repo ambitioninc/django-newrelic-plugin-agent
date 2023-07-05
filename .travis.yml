@@ -1,12 +1,12 @@
 sudo: false
 language: python
 python:
-  - '3.6'
+  - '3.7'
 env:
   global:
     - DB=postgres
   matrix:
-    - DJANGO=">=1.11"
+    - DJANGO=">=3.2"
 install:
   - pip install -q coveralls coverage flake8 Django$DJANGO
   - pip install -r requirements/docs.txt
